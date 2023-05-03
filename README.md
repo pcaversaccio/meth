@@ -1,4 +1,4 @@
-# 🔥 In Mojo We Trust
+# 🔥 In Mojo We TRust
 
 > The moment you Rust, you should look for your Mojo 🔥.
 
