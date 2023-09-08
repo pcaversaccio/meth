@@ -1,0 +1,12 @@
+##############################################
+#            Precompiled Contracts           #
+##############################################
+ECRECOVER = 0x0000000000000000000000000000000000000001                   # Elliptic curve digital signature algorithm (ECDSA) public key recovery function
+SHA256 = 0x0000000000000000000000000000000000000002                      # SHA256 hash function
+RIPEMD160 = 0x0000000000000000000000000000000000000003                   # RIPEMD-160 hash function
+IDENTITY = 0x0000000000000000000000000000000000000004                    # Returns the input
+MODEXP = 0x0000000000000000000000000000000000000005                      # Arbitrary-precision exponentiation under modulo
+ALT_BN128_ADD = 0x0000000000000000000000000000000000000006               # Point addition (ADD) on the elliptic curve 'alt_bn128'
+ALT_BN128_MUL = 0x0000000000000000000000000000000000000007               # Scalar multiplication (MUL) on the elliptic curve 'alt_bn128'
+ALT_BN128_PAIRING_CHECK = 0x0000000000000000000000000000000000000008     # Bilinear function on groups on the elliptic curve 'alt_bn128'
+BLAKE2F = 0x0000000000000000000000000000000000000009                     # Compression function F used in the BLAKE2 cryptographic hashing algorithm

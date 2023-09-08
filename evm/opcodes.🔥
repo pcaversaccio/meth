@@ -1,0 +1,188 @@
+##############################################
+#       Stop and Arithmetic Operations       #
+##############################################
+STOP = 0x00                       # Halts execution (mnemonic: `STOP`)
+ADD = 0x01                        # Addition operation (mnemonic: `ADD`)
+MUL = 0x02                        # Multiplication operation (mnemonic: `MUL`)
+SUB = 0x03                        # Subtraction operation (mnemonic: `SUB`)
+DIV = 0x04                        # Integer division operation (mnemonic: `DIV`)
+SDIV = 0x05                       # Signed integer division operation (truncated) (mnemonic: `SDIV`)
+MOD = 0x06                        # Modulo remainder operation (mnemonic: `MOD`)
+SMOD = 0x07                       # Signed modulo remainder operation (mnemonic: `SMOD`)
+ADDMOD = 0x08                     # Modulo addition operation (mnemonic: `ADDMOD`)
+MULMOD = 0x09                     # Modulo multiplication operation (mnemonic: `MULMOD`)
+EXP = 0x0A                        # Exponential operation (mnemonic: `EXP`)
+SIGNEXTEND = 0x0B                 # Extend length of two's complement signed integer (mnemonic: `SIGNEXTEND`)
+
+##############################################
+#    Comparison & Bitwise Logic Operations   #
+##############################################
+LT = 0x10                         # Less-than comparison (mnemonic: `LT`)
+GT = 0x11                         # Greater-than comparison (mnemonic: `GT`)
+SLT = 0x12                        # Signed less-than comparison (mnemonic: `SLT`)
+SGT = 0x13                        # Signed greater-than comparison (mnemonic: `SGT`)
+EQ = 0x14                         # Equality comparison (mnemonic: `EQ`)
+ISZERO = 0x15                     # Is-zero comparison (mnemonic: `ISZERO`)
+AND = 0x16                        # Bitwise AND operation (mnemonic: `AND`)
+OR = 0x17                         # Bitwise OR operation (mnemonic: `OR`)
+XOR = 0x18                        # Bitwise XOR operation (mnemonic: `XOR`)
+NOT = 0x19                        # Bitwise NOT operation (mnemonic: `NOT`)
+BYTE = 0x1A                       # Retrieve single byte from word (mnemonic: `BYTE`)
+SHL = 0x1B                        # Left shift operation (mnemonic: `SHL`)
+SHR = 0x1C                        # Logical right shift operation (mnemonic: `SHR`)
+SAR = 0x1D                        # Arithmetic (signed) right shift operation (mnemonic: `SAR`)
+
+##############################################
+#                    SHA3                    #
+##############################################
+SHA3 = 0x20                       # Compute Keccak-256 hash (mnemonic: `SHA3`)
+
+##############################################
+#          Environmental Information         #
+##############################################
+ADDRESS = 0x30                    # Get address of currently executing account (mnemonic: `ADDRESS`)
+BALANCE = 0x31                    # Get balance of the given account (mnemonic: `BALANCE`)
+ORIGIN = 0x32                     # Get execution origination address (mnemonic: `ORIGIN`)
+CALLER = 0x33                     # Get caller address (mnemonic: `CALLER`)
+CALLVALUE = 0x34                  # Get deposited value by the instruction/transaction responsible for this execution (mnemonic: `CALLVALUE`)
+CALLDATALOAD = 0x35               # Get input data of current environment (mnemonic: `CALLDATALOAD`)
+CALLDATASIZE = 0x36               # Get size of input data in current environment (mnemonic: `CALLDATASIZE`)
+CALLDATACOPY = 0x37               # Copy input data in current environment to memory (mnemonic: `CALLDATACOPY`)
+CODESIZE = 0x38                   # Get size of code running in current environment (mnemonic: `CODESIZE`)
+CODECOPY = 0x39                   # Copy code running in current environment to memory (mnemonic: `CODECOPY`)
+GASPRICE = 0x3A                   # Get price of gas in current environment (mnemonic: `GASPRICE`)
+EXTCODESIZE = 0x3B                # Get size of an account's code (mnemonic: `EXTCODESIZE`)
+EXTCODECOPY = 0x3C                # Copy an account's code to memory (mnemonic: `EXTCODECOPY`)
+RETURNDATASIZE = 0x3D             # Get size of output data from the previous call from the current environment (mnemonic: `RETURNDATASIZE`)
+RETURNDATACOPY = 0x3E             # Copy output data from the previous call to memory (mnemonic: `RETURNDATACOPY`)
+EXTCODEHASH = 0x3F                # Get hash of an account's code (mnemonic: `EXTCODEHASH`)
+
+##############################################
+#              Block Information             #
+##############################################
+BLOCKHASH = 0x40                  # Get the hash of one of the 256 most recent complete blocks (mnemonic: `BLOCKHASH`)
+COINBASE = 0x41                   # Get the block's beneficiary address (mnemonic: `COINBASE`)
+TIMESTAMP = 0x42                  # Get the block's timestamp (mnemonic: `TIMESTAMP`)
+NUMBER = 0x43                     # Get the block's number (mnemonic: `NUMBER`)
+DIFFICULTY = 0x44                 # Get the block's difficulty (mnemonic: `DIFFICULTY`)
+PREVRANDAO = 0x44                 # Get the previous block's RANDAO mix (mnemonic: `PREVRANDAO`)
+GASLIMIT = 0x45                   # Get the block's gas limit (mnemonic: `GASLIMIT`)
+CHAINID = 0x46                    # Get the chain ID (mnemonic: `CHAINID`)
+SELFBALANCE = 0x47                # Get balance of currently executing account (mnemonic: `SELFBALANCE`)
+BASEFEE = 0x48                    # Get the base fee (mnemonic: `BASEFEE`)
+
+##############################################
+#  Stack Memory Storage and Flow Operations  #
+##############################################
+POP = 0x50                        # Remove item from stack (mnemonic: `POP`)
+MLOAD = 0x51                      # Load word from memory (mnemonic: `MLOAD`)
+MSTORE = 0x52                     # Save word to memory (mnemonic: `MSTORE`)
+MSTORE8 = 0x53                    # Save byte to memory (mnemonic: `MSTORE8`)
+SLOAD = 0x54                      # Load word from storage (mnemonic: `SLOAD`)
+SSTORE = 0x55                     # Save word to storage (mnemonic: `SSTORE`)
+JUMP = 0x56                       # Alter the program counter (mnemonic: `JUMP`)
+JUMPI = 0x57                      # Conditionally alter the program counter (mnemonic: `JUMPI`)
+PC = 0x58                         # Get the value of the program counter prior to the increment corresponding to this instruction (mnemonic: `PC`)
+MSIZE = 0x59                      # Get the size of active memory in bytes (mnemonic: `MSIZE`)
+GAS = 0x5A                        # Get the amount of available gas, including the corresponding reduction for the cost of this instruction (mnemonic: `GAS`)
+JUMPDEST = 0x5B                   # Mark a valid destination for jumps (mnemonic: `JUMPDEST`)
+
+##############################################
+#               Push Operations              #
+##############################################
+PUSH0 = 0x5F                      # Place value 0 on stack (mnemonic: `PUSH0`)
+PUSH1 = 0x60                      # Place 1-byte item on stack (mnemonic: `PUSH1`)
+PUSH2 = 0x61                      # Place 2-byte item on stack (mnemonic: `PUSH2`)
+PUSH3 = 0x62                      # Place 3-byte item on stack (mnemonic: `PUSH3`)
+PUSH4 = 0x63                      # Place 4-byte item on stack (mnemonic: `PUSH4`)
+PUSH5 = 0x64                      # Place 5-byte item on stack (mnemonic: `PUSH5`)
+PUSH6 = 0x65                      # Place 6-byte item on stack (mnemonic: `PUSH6`)
+PUSH7 = 0x66                      # Place 7-byte item on stack (mnemonic: `PUSH7`)
+PUSH8 = 0x67                      # Place 8-byte item on stack (mnemonic: `PUSH8`)
+PUSH9 = 0x68                      # Place 8-byte item on stack (mnemonic: `PUSH9`)
+PUSH10 = 0x69                     # Place 10-byte item on stack (mnemonic: `PUSH10`)
+PUSH11 = 0x6A                     # Place 11-byte item on stack (mnemonic: `PUSH11`)
+PUSH12 = 0x6B                     # Place 12-byte item on stack (mnemonic: `PUSH12`)
+PUSH13 = 0x6C                     # Place 13-byte item on stack (mnemonic: `PUSH13`)
+PUSH14 = 0x6D                     # Place 14-byte item on stack (mnemonic: `PUSH14`)
+PUSH15 = 0x6E                     # Place 15-byte item on stack (mnemonic: `PUSH15`)
+PUSH16 = 0x6F                     # Place 16-byte item on stack (mnemonic: `PUSH16`)
+PUSH17 = 0x70                     # Place 17-byte item on stack (mnemonic: `PUSH17`)
+PUSH18 = 0x71                     # Place 18-byte item on stack (mnemonic: `PUSH18`)
+PUSH19 = 0x72                     # Place 19-byte item on stack (mnemonic: `PUSH19`)
+PUSH20 = 0x73                     # Place 20-byte item on stack (mnemonic: `PUSH20`)
+PUSH21 = 0x74                     # Place 21-byte item on stack (mnemonic: `PUSH21`)
+PUSH22 = 0x75                     # Place 22-byte item on stack (mnemonic: `PUSH22`)
+PUSH23 = 0x76                     # Place 23-byte item on stack (mnemonic: `PUSH23`)
+PUSH24 = 0x77                     # Place 24-byte item on stack (mnemonic: `PUSH24`)
+PUSH25 = 0x78                     # Place 25-byte item on stack (mnemonic: `PUSH25`)
+PUSH26 = 0x79                     # Place 26-byte item on stack (mnemonic: `PUSH26`)
+PUSH27 = 0x7A                     # Place 27-byte item on stack (mnemonic: `PUSH27`)
+PUSH28 = 0x7B                     # Place 28-byte item on stack (mnemonic: `PUSH28`)
+PUSH29 = 0x7C                     # Place 29-byte item on stack (mnemonic: `PUSH29`)
+PUSH30 = 0x7D                     # Place 30-byte item on stack (mnemonic: `PUSH30`)
+PUSH31 = 0x7E                     # Place 31-byte item on stack (mnemonic: `PUSH31`)
+PUSH32 = 0x7F                     # Place 32-byte (full word) item on stack (mnemonic: `PUSH32`)
+
+##############################################
+#            Duplicate Operations            #
+##############################################
+DUP1 = 0x80                       # Duplicate 1st stack item (mnemonic: `DUP1`)
+DUP2 = 0x81                       # Duplicate 2nd stack item (mnemonic: `DUP2`)
+DUP3 = 0x82                       # Duplicate 3rd stack item (mnemonic: `DUP3`)
+DUP4 = 0x83                       # Duplicate 4th stack item (mnemonic: `DUP4`)
+DUP5 = 0x84                       # Duplicate 5th stack item (mnemonic: `DUP5`)
+DUP6 = 0x85                       # Duplicate 6th stack item (mnemonic: `DUP6`)
+DUP7 = 0x86                       # Duplicate 7th stack item (mnemonic: `DUP7`)
+DUP8 = 0x87                       # Duplicate 8th stack item (mnemonic: `DUP8`)
+DUP9 = 0x88                       # Duplicate 9th stack item (mnemonic: `DUP9`)
+DUP10 = 0x89                      # Duplicate 10th stack item (mnemonic: `DUP10`)
+DUP11 = 0x8A                      # Duplicate 11th stack item (mnemonic: `DUP11`)
+DUP12 = 0x8B                      # Duplicate 12th stack item (mnemonic: `DUP12`)
+DUP13 = 0x8C                      # Duplicate 13th stack item (mnemonic: `DUP13`)
+DUP14 = 0x8D                      # Duplicate 14th stack item (mnemonic: `DUP14`)
+DUP15 = 0x8E                      # Duplicate 15th stack item (mnemonic: `DUP15`)
+DUP16 = 0x8F                      # Duplicate 16th stack item (mnemonic: `DUP16`)
+
+##############################################
+#             Exchange Operations            #
+##############################################
+SWAP1 = 0x90                      # Exchange 1st and 2nd stack items (mnemonic: `SWAP1`)
+SWAP2 = 0x91                      # Exchange 1st and 3rd stack items (mnemonic: `SWAP2`)
+SWAP3 = 0x92                      # Exchange 1st and 4th stack items (mnemonic: `SWAP3`)
+SWAP4 = 0x93                      # Exchange 1st and 5th stack items (mnemonic: `SWAP4`)
+SWAP5 = 0x94                      # Exchange 1st and 6th stack items (mnemonic: `SWAP5`)
+SWAP6 = 0x95                      # Exchange 1st and 7th stack items (mnemonic: `SWAP6`)
+SWAP7 = 0x96                      # Exchange 1st and 8th stack items (mnemonic: `SWAP7`)
+SWAP8 = 0x97                      # Exchange 1st and 9th stack items (mnemonic: `SWAP8`)
+SWAP9 = 0x98                      # Exchange 1st and 10th stack items (mnemonic: `SWAP9`)
+SWAP10 = 0x99                     # Exchange 1st and 11th stack items (mnemonic: `SWAP10`)
+SWAP11 = 0x9A                     # Exchange 1st and 12th stack items (mnemonic: `SWAP11`)
+SWAP12 = 0x9B                     # Exchange 1st and 13th stack items (mnemonic: `SWAP12`)
+SWAP13 = 0x9C                     # Exchange 1st and 14th stack items (mnemonic: `SWAP13`)
+SWAP14 = 0x9D                     # Exchange 1st and 15th stack items (mnemonic: `SWAP14`)
+SWAP15 = 0x9E                     # Exchange 1st and 16th stack items (mnemonic: `SWAP15`)
+SWAP16 = 0x9F                     # Exchange 1st and 17th stack items (mnemonic: `SWAP16`)
+
+##############################################
+#             Logging Operations             #
+##############################################
+LOG0 = 0xA0                       # Append log record with no topics (mnemonic: `LOG0`)
+LOG1 = 0xA1                       # Append log record with one topic (mnemonic: `LOG1`)
+LOG2 = 0xA2                       # Append log record with two topics (mnemonic: `LOG2`)
+LOG3 = 0xA3                       # Append log record with three topics (mnemonic: `LOG3`)
+LOG4 = 0xA4                       # Append log record with four topics (mnemonic: `LOG4`)
+
+##############################################
+#              System Operations             #
+##############################################
+CREATE = 0xF0                     # Create a new account with associated code (mnemonic: `CREATE`)
+CALL = 0xF1                       # Message-call into an account (mnemonic: `CALL`)
+CALLCODE = 0xF2                   # Message-call into this account with alternative account's code (mnemonic: `CALLCODE`)
+RETURN = 0xF3                     # Halt execution returning output data (mnemonic: `RETURN`)
+DELEGATECALL = 0xF4               # Message-call into this account with an alternative account's code, but persisting the current values for sender and value Halt execution returning output data (mnemonic: `DELEGATECALL`)
+CREATE2 = 0xF5                    # Create a new account with associated code at a predictable address (mnemonic: `CREATE2`)
+STATICCALL = 0xFA                 # Static message-call into an account (mnemonic: `STATICCALL`)
+REVERT = 0xFD                     # Halt execution reverting state changes but returning data and remaining gas (mnemonic: `REVERT`)
+INVALID = 0xFE                    # Designated invalid instruction (mnemonic: `INVALID`)
+SELFDESTRUCT = 0xFF               # Halt execution and register account for later deletion (mnemonic: `SELFDESTRUCT`)

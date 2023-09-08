@@ -1,0 +1,188 @@
+##############################################
+#       Stop and Arithmetic Operations       #
+##############################################
+STOP = "STOP"                     # Halts execution (opcode: `0x00`)
+ADD = "ADD"                       # Addition operation (opcode: `0x01`)
+MUL = "MUL"                       # Multiplication operation (opcode: `0x02`)
+SUB = "SUB"                       # Subtraction operation (opcode: `0x03`)
+DIV = "DIV"                       # Integer division operation (opcode: `0x04`)
+SDIV = "SDIV"                     # Signed integer division operation (truncated) (opcode: `0x05`)
+MOD = "MOD"                       # Modulo remainder operation (opcode: `0x06`)
+SMOD = "SMOD"                     # Signed modulo remainder operation (opcode: `0x07`)
+ADDMOD = "ADDMOD"                 # Modulo addition operation (opcode: `0x08`)
+MULMOD = "MULMOD"                 # Modulo multiplication operation (opcode: `0x09`)
+EXP = "EXP"                       # Exponential operation (opcode: `0x0A`)
+SIGNEXTEND = "SIGNEXTEND"         # Extend length of two's complement signed integer (opcode: `0x0B`)
+
+##############################################
+#    Comparison & Bitwise Logic Operations   #
+##############################################
+LT = "LT"                         # Less-than comparison (opcode: `0x10`)
+GT = "GT"                         # Greater-than comparison (opcode: `0x11`)
+SLT = "SLT"                       # Signed less-than comparison (opcode: `0x12`)
+SGT = "SGT"                       # Signed greater-than comparison (opcode: `0x13`)
+EQ = "EQ"                         # Equality comparison (opcode: `0x14`)
+ISZERO = "ISZERO"                 # Is-zero comparison (opcode: `0x15`)
+AND = "AND"                       # Bitwise AND operation (opcode: `0x16`)
+OR = "OR"                         # Bitwise OR operation (opcode: `0x17`)
+XOR = "XOR"                       # Bitwise XOR operation (opcode: `0x18`)
+NOT = "NOT"                       # Bitwise NOT operation (opcode: `0x19`)
+BYTE = "BYTE"                     # Retrieve single byte from word (opcode: `0x1A`)
+SHL = "SHL"                       # Left shift operation (opcode: `0x1B`)
+SHR = "SHR"                       # Logical right shift operation (opcode: `0x1C`)
+SAR = "SAR"                       # Arithmetic (signed) right shift operation (opcode: `0x1D`)
+
+##############################################
+#                    SHA3                    #
+##############################################
+SHA3 = "SHA3"                     # Compute Keccak-256 hash (opcode: `0x20`)
+
+##############################################
+#          Environmental Information         #
+##############################################
+ADDRESS = "ADDRESS"               # Get address of currently executing account (opcode: `0x30`)
+BALANCE = "BALANCE"               # Get balance of the given account (opcode: `0x31`)
+ORIGIN = "ORIGIN"                 # Get execution origination address (opcode: `0x32`)
+CALLER = "CALLER"                 # Get caller address (opcode: `0x33`)
+CALLVALUE = "CALLVALUE"           # Get deposited value by the instruction/transaction responsible for this execution (opcode: `0x34`)
+CALLDATALOAD = "CALLDATALOAD"     # Get input data of current environment (opcode: `0x35`)
+CALLDATASIZE = "CALLDATASIZE"     # Get size of input data in current environment (opcode: `0x36`)
+CALLDATACOPY = "CALLDATACOPY"     # Copy input data in current environment to memory (opcode: `0x37`)
+CODESIZE = "CODESIZE"             # Get size of code running in current environment (opcode: `0x38`)
+CODECOPY = "CODECOPY"             # Copy code running in current environment to memory (opcode: `0x39`)
+GASPRICE = "GASPRICE"             # Get price of gas in current environment (opcode: `0x3A`)
+EXTCODESIZE = "EXTCODESIZE"       # Get size of an account's code (opcode: `0x3B`)
+EXTCODECOPY = "EXTCODECOPY"       # Copy an account's code to memory (opcode: `0x3C`)
+RETURNDATASIZE = "RETURNDATASIZE" # Get size of output data from the previous call from the current environment (opcode: `0x3D`)
+RETURNDATACOPY = "RETURNDATACOPY" # Copy output data from the previous call to memory (opcode: `0x3E`)
+EXTCODEHASH = "EXTCODEHASH"       # Get hash of an account's code (opcode: `0x3F`)
+
+##############################################
+#              Block Information             #
+##############################################
+BLOCKHASH = "BLOCKHASH"           # Get the hash of one of the 256 most recent complete blocks (opcode: `0x40`)
+COINBASE = "COINBASE"             # Get the block's beneficiary address (opcode: `0x41`)
+TIMESTAMP = "TIMESTAMP"           # Get the block's timestamp (opcode: `0x42`)
+NUMBER = "NUMBER"                 # Get the block's number (opcode: `0x43`)
+DIFFICULTY = "DIFFICULTY"         # Get the block's difficulty (opcode: `0x44`)
+PREVRANDAO = "PREVRANDAO"         # Get the previous block's RANDAO mix (opcode: `0x44`)
+GASLIMIT = "GASLIMIT"             # Get the block's gas limit (opcode: `0x45`)
+CHAINID = "CHAINID"               # Get the chain ID (opcode: `0x46`)
+SELFBALANCE = "SELFBALANCE"       # Get balance of currently executing account (opcode: `0x47`)
+BASEFEE = "BASEFEE"               # Get the base fee (opcode: `0x48`)
+
+##############################################
+#  Stack Memory Storage and Flow Operations  #
+##############################################
+POP = "POP"                       # Remove item from stack (opcode: `0x50`)
+MLOAD = "MLOAD"                   # Load word from memory (opcode: `0x51`)
+MSTORE = "MSTORE"                 # Save word to memory (opcode: `0x52`)
+MSTORE8 = "MSTORE8"               # Save byte to memory (opcode: `0x53`)
+SLOAD = "SLOAD"                   # Load word from storage (opcode: `0x54`)
+SSTORE = "SSTORE"                 # Save word to storage (opcode: `0x55`)
+JUMP = "JUMP"                     # Alter the program counter (opcode: `0x56`)
+JUMPI = "JUMPI"                   # Conditionally alter the program counter (opcode: `0x57`)
+PC = "PC"                         # Get the value of the program counter prior to the increment corresponding to this instruction (opcode: `0x58`)
+MSIZE = "MSIZE"                   # Get the size of active memory in bytes (opcode: `0x59`)
+GAS = "GAS"                       # Get the amount of available gas, including the corresponding reduction for the cost of this instruction (opcode: `0x5A`)
+JUMPDEST = "JUMPDEST"             # Mark a valid destination for jumps (opcode: `0x5B`)
+
+##############################################
+#               Push Operations              #
+##############################################
+PUSH0 = "PUSH0"                   # Place value 0 on stack (opcode: `0x5F`)
+PUSH1 = "PUSH1"                   # Place 1-byte item on stack (opcode: `0x60`)
+PUSH2 = "PUSH2"                   # Place 2-byte item on stack (opcode: `0x61`)
+PUSH3 = "PUSH3"                   # Place 3-byte item on stack (opcode: `0x62`)
+PUSH4 = "PUSH4"                   # Place 4-byte item on stack (opcode: `0x63`)
+PUSH5 = "PUSH5"                   # Place 5-byte item on stack (opcode: `0x64`)
+PUSH6 = "PUSH6"                   # Place 6-byte item on stack (opcode: `0x65`)
+PUSH7 = "PUSH7"                   # Place 7-byte item on stack (opcode: `0x66`)
+PUSH8 = "PUSH8"                   # Place 8-byte item on stack (opcode: `0x67`)
+PUSH9 = "PUSH9"                   # Place 8-byte item on stack (opcode: `0x68`)
+PUSH10 = "PUSH10"                 # Place 10-byte item on stack (opcode: `0x69`)
+PUSH11 = "PUSH11"                 # Place 11-byte item on stack (opcode: `0x6A`)
+PUSH12 = "PUSH12"                 # Place 12-byte item on stack (opcode: `0x6B`)
+PUSH13 = "PUSH13"                 # Place 13-byte item on stack (opcode: `0x6C`)
+PUSH14 = "PUSH14"                 # Place 14-byte item on stack (opcode: `0x6D`)
+PUSH15 = "PUSH15"                 # Place 15-byte item on stack (opcode: `0x6E`)
+PUSH16 = "PUSH16"                 # Place 16-byte item on stack (opcode: `0x6F`)
+PUSH17 = "PUSH17"                 # Place 17-byte item on stack (opcode: `0x70`)
+PUSH18 = "PUSH18"                 # Place 18-byte item on stack (opcode: `0x71`)
+PUSH19 = "PUSH19"                 # Place 19-byte item on stack (opcode: `0x72`)
+PUSH20 = "PUSH20"                 # Place 20-byte item on stack (opcode: `0x73`)
+PUSH21 = "PUSH21"                 # Place 21-byte item on stack (opcode: `0x74`)
+PUSH22 = "PUSH22"                 # Place 22-byte item on stack (opcode: `0x75`)
+PUSH23 = "PUSH23"                 # Place 23-byte item on stack (opcode: `0x76`)
+PUSH24 = "PUSH24"                 # Place 24-byte item on stack (opcode: `0x77`)
+PUSH25 = "PUSH25"                 # Place 25-byte item on stack (opcode: `0x78`)
+PUSH26 = "PUSH26"                 # Place 26-byte item on stack (opcode: `0x79`)
+PUSH27 = "PUSH27"                 # Place 27-byte item on stack (opcode: `0x7A`)
+PUSH28 = "PUSH28"                 # Place 28-byte item on stack (opcode: `0x7B`)
+PUSH29 = "PUSH29"                 # Place 29-byte item on stack (opcode: `0x7C`)
+PUSH30 = "PUSH30"                 # Place 30-byte item on stack (opcode: `0x7D`)
+PUSH31 = "PUSH31"                 # Place 31-byte item on stack (opcode: `0x7E`)
+PUSH32 = "PUSH32"                 # Place 32-byte (full word) item on stack (opcode: `0x7F`)
+
+##############################################
+#            Duplicate Operations            #
+##############################################
+DUP1 = "DUP1"                     # Duplicate 1st stack item (opcode: `0x80`)
+DUP2 = "DUP2"                     # Duplicate 2nd stack item (opcode: `0x81`)
+DUP3 = "DUP3"                     # Duplicate 3rd stack item (opcode: `0x82`)
+DUP4 = "DUP4"                     # Duplicate 4th stack item (opcode: `0x83`)
+DUP5 = "DUP5"                     # Duplicate 5th stack item (opcode: `0x84`)
+DUP6 = "DUP6"                     # Duplicate 6th stack item (opcode: `0x85`)
+DUP7 = "DUP7"                     # Duplicate 7th stack item (opcode: `0x86`)
+DUP8 = "DUP8"                     # Duplicate 8th stack item (opcode: `0x87`)
+DUP9 = "DUP9"                     # Duplicate 9th stack item (opcode: `0x88`)
+DUP10 = "DUP10"                   # Duplicate 10th stack item (opcode: `0x89`)
+DUP11 = "DUP11"                   # Duplicate 11th stack item (opcode: `0x8A`)
+DUP12 = "DUP12"                   # Duplicate 12th stack item (opcode: `0x8B`)
+DUP13 = "DUP13"                   # Duplicate 13th stack item (opcode: `0x8C`)
+DUP14 = "DUP14"                   # Duplicate 14th stack item (opcode: `0x8D`)
+DUP15 = "DUP15"                   # Duplicate 15th stack item (opcode: `0x8E`)
+DUP16 = "DUP16"                   # Duplicate 16th stack item (opcode: `0x8F`)
+
+##############################################
+#             Exchange Operations            #
+##############################################
+SWAP1 = "SWAP1"                   # Exchange 1st and 2nd stack items (opcode: `0x90`)
+SWAP2 = "SWAP2"                   # Exchange 1st and 3rd stack items (opcode: `0x91`)
+SWAP3 = "SWAP3"                   # Exchange 1st and 4th stack items (opcode: `0x92`)
+SWAP4 = "SWAP4"                   # Exchange 1st and 5th stack items (opcode: `0x93`)
+SWAP5 = "SWAP5"                   # Exchange 1st and 6th stack items (opcode: `0x94`)
+SWAP6 = "SWAP6"                   # Exchange 1st and 7th stack items (opcode: `0x95`)
+SWAP7 = "SWAP7"                   # Exchange 1st and 8th stack items (opcode: `0x96`)
+SWAP8 = "SWAP8"                   # Exchange 1st and 9th stack items (opcode: `0x97`)
+SWAP9 = "SWAP9"                   # Exchange 1st and 10th stack items (opcode: `0x98`)
+SWAP10 = "SWAP10"                 # Exchange 1st and 11th stack items (opcode: `0x99`)
+SWAP11 = "SWAP11"                 # Exchange 1st and 12th stack items (opcode: `0x9A`)
+SWAP12 = "SWAP12"                 # Exchange 1st and 13th stack items (opcode: `0x9B`)
+SWAP13 = "SWAP13"                 # Exchange 1st and 14th stack items (opcode: `0x9C`)
+SWAP14 = "SWAP14"                 # Exchange 1st and 15th stack items (opcode: `0x9D`)
+SWAP15 = "SWAP15"                 # Exchange 1st and 16th stack items (opcode: `0x9E`)
+SWAP16 = "SWAP16"                 # Exchange 1st and 17th stack items (opcode: `0x9F`)
+
+##############################################
+#             Logging Operations             #
+##############################################
+LOG0 = "LOG0"                     # Append log record with no topics (opcode: `0xA0`)
+LOG1 = "LOG1"                     # Append log record with one topic (opcode: `0xA1`)
+LOG2 = "LOG2"                     # Append log record with two topics (opcode: `0xA2`)
+LOG3 = "LOG3"                     # Append log record with three topics (opcode: `0xA3`)
+LOG4 = "LOG4"                     # Append log record with four topics (opcode: `0xA4`)
+
+##############################################
+#              System Operations             #
+##############################################
+CREATE = "CREATE"                 # Create a new account with associated code (opcode: `0xF0`)
+CALL = "CALL"                     # Message-call into an account (opcode: `0xF1`)
+CALLCODE = "CALLCODE"             # Message-call into this account with alternative account's code (opcode: `0xF2`)
+RETURN = "RETURN"                 # Halt execution returning output data (opcode: `0xF3`)
+DELEGATECALL = "DELEGATECALL"     # Message-call into this account with an alternative account's code, but persisting the current values for sender and value Halt execution returning output data (opcode: `0xF4`)
+CREATE2 = "CREATE2"               # Create a new account with associated code at a predictable address (opcode: `0xF5`)
+STATICCALL = "STATICCALL"         # Static message-call into an account (opcode: `0xFA`)
+REVERT = "REVERT"                 # Halt execution reverting state changes but returning data and remaining gas (opcode: `0xFD`)
+INVALID = "INVALID"               # Designated invalid instruction (opcode: `0xFE`)
+SELFDESTRUCT = "SELFDESTRUCT"     # Halt execution and register account for later deletion (opcode: `0xFF`)
